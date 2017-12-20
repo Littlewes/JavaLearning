@@ -4,7 +4,7 @@ public class Monster{
 
     public final String TOMBSTONE = "Here Lies a Dead Monster";
 
-    private int health = 500;
+    private double health = 500.0;
     private int attack = 20;
     private int movement = 2;
     private int XPosition = 0;
@@ -37,12 +37,9 @@ public class Monster{
         }
     }
 
-    public void setHealth(double decrease)
-    {
-        int intDecreaseHealth = (int) decrease;
-        
-        health = health - intDecreaseHealth;
-        if (health < 0) {
+    public void setHealth(double decrease){        
+        health = health - decrease;
+        if (health < 0.0) {
             alive = false;
         }
     }
